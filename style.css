@@ -77,57 +77,60 @@ button path {
 }
 
 .prev{}
+
+
+
 /* ****************************************** */
 @media screen and (max-width: 800px) {
-    .carousel__item {
+    .carouselItem {
         flex-basis: 15%;
     }
 }
 
 @media screen and (max-width: 600px) {
     
-    .carousel__item {
+    .carouselItem {
         flex-basis: 10%;
         margin: 0 5px;
         border-radius: 8px;
         font-size: 3vw;
     }
     
-    .carousel__item[data-active] {
+    .carouselItem[data-active] {
         flex-basis: 45%;
         flex-grow: 0;
     }
 
-    .carousel__item:nth-child(3),
-    .carousel__item:nth-child(7) {
+    .carouselItem:nth-child(3),
+    .carouselItem:nth-child(7) {
         flex: 0 0 10px;
     }
 
-    .carousel__item:nth-child(2),
-    .carousel__item:nth-child(8) {
+    .carouselItem:nth-child(2),
+    .carouselItem:nth-child(8) {
         flex: 0 0 5px;
         transform: translateX(-50px);
     }
 
-    .carousel__item:nth-child(8) {
+    .carouselItem:nth-child(8) {
         transform: translateX(50px);
     }
 
-    .carousel__item:nth-child( 1 ),
-    .carousel__item:nth-child( n + 9 ) {
+    .carouselItem:nth-child( 1 ),
+    .carouselItem:nth-child( n + 9 ) {
         flex: 0 0 0px;
         margin: 0;
         box-shadow: none;
         opacity: 0!important;
     }
 
-    .carousel__item:not(:nth-child( n + 5 )) img,
-    .carousel__item:nth-child( n + 7 ) img {
+    .carouselItem:not(:nth-child( n + 5 )) img,
+    .carouselItem:nth-child( n + 7 ) img {
         opacity: 0.8;
     }
 
-    .carousel__item:not(:nth-child( n + 4 )) *,
-    .carousel__item:nth-child( n + 7 ) * {
+    .carouselItem:not(:nth-child( n + 4 )) *,
+    .carouselItem:nth-child( n + 7 ) * {
         opacity: 0!important;
     }
     
@@ -135,42 +138,42 @@ button path {
 
 @media screen and (min-width: 600px) {
 
-    .carousel__item:nth-child(3),
-    .carousel__item:nth-child(10) {
+    .carouselItem:nth-child(3),
+    .carouselItem:nth-child(10) {
         flex: 0 0 10px;
     }
 
-    .carousel__item:nth-child(2),
-    .carousel__item:nth-child(11) {
+    .carouselItem:nth-child(2),
+    .carouselItem:nth-child(11) {
         flex: 0 0 5px;
         transform: translateX(-50px);
     }
 
-    .carousel__item:nth-child(11) {
+    .carouselItem:nth-child(11) {
         transform: translateX(50px);
     }
 
-    .carousel__item:nth-child( 1 ),
-    .carousel__item:nth-child( n + 12 ) {
+    .carouselItem:nth-child( 1 ),
+    .carouselItem:nth-child( n + 12 ) {
         flex: 0 0 0px;
         margin: 0;
         box-shadow: none;
         opacity: 0!important;
     }
 
-    .carousel__item:not(:nth-child( n + 5 )) img,
-    .carousel__item:nth-child( n + 9 ) img {
+    .carouselItem:not(:nth-child( n + 5 )) img,
+    .carouselItem:nth-child( n + 9 ) img {
         opacity: 0.8;
     }
 
-    .carousel__item:not(:nth-child( n + 4 )) *,
-    .carousel__item:nth-child( n + 10 ) * {
+    .carouselItem:not(:nth-child( n + 4 )) *,
+    .carouselItem:nth-child( n + 10 ) * {
         opacity: 0!important;
     }
     
 }
 
-.carousel__item img {
+.carouselItem img {
     display: block;
     position: absolute;
     width: var(--width);
@@ -184,7 +187,7 @@ button path {
     filter: saturate(0.2) contrast(0.75) brightness(1.1);
 }
 
-.carousel__item::after {
+.carouselItem::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -196,17 +199,17 @@ button path {
     transition: all .66s cubic-bezier(.55,.24,.18,1);
 }
 
-.carousel__item[data-active]::after {
+.carouselItem[data-active]::after {
     transform: translateY(100%);
 }
 
-.carousel__item[data-active],
-.carousel__item[data-active] * {
+.carouselItem[data-active],
+.carouselItem[data-active] * {
     opacity: 1;
     filter: none;
 }
 
-.carousel__contents {
+.carouselContents {
     display: flex;
     flex-direction: column-reverse;
     justify-content: start;
@@ -221,7 +224,7 @@ button path {
     left: 0;
 }
 
-.carousel__contents .user__name {
+.carouselContents .contentName {
     color: #e8eff4;
     font-size: 1.75em;
     font-weight: 600;
@@ -229,23 +232,7 @@ button path {
     text-shadow: 0 1px 0 rgba(0,0,0,0.3);
 }
 
-.carousel__contents .user__title {
-    font-family: lexend;
-    font-size: .875em;
-    letter-spacing: 1.25px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: transparent;
-    background: linear-gradient( 270deg, rgb(67, 255, 0), rgb(0, 255, 247) );
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0.85;
-    text-wrap: balance;
-    margin-bottom: 0.5em;
-}
-
-.carousel__contents .user__title,
-.carousel__contents .user__name {
+.carouselContents .contentName {
     margin: 0;
     line-height: 1.1;
     opacity: 0;
@@ -255,10 +242,10 @@ button path {
 }
 
 @media screen and (max-width: 800px) {
-    .carousel__item img {
+    .carouselItem img {
         width: calc(var(--width) * .5);
     }
-    .carousel__contents {
+    .carouselContents {
         transform: translateX(-100%) rotate(90deg);
         transform-origin: bottom right;
         align-items: end;
@@ -271,25 +258,20 @@ button path {
         left: 0;
         text-align: right;
     }
-    [data-active] .carousel__contents {
+    [data-active] .carouselContents {
         background-position: 100% 100%;
     }
-    .carousel__contents .user__title,
-    .carousel__contents .user__name {
+    .carouselContents .contentName {
         max-width: 70vh;
         transform: translateX(200px);
     }
 }
 
-[data-active] .carousel__contents * {
+[data-active] .carouselContents * {
     transform: translateX(0px); 
     transition-duration: 0.66s;
     opacity: 1;
 }
-[data-active] .carousel__contents .user__name {
+[data-active] .carouselContents .contentName {
     transition-delay: 0.1s;
-}
-[data-active] .carousel__contents .user__title {
-    opacity: 0.85; 
-    transition-delay: 0.05s;
 }
