@@ -1,3 +1,4 @@
+document.write("hiiiiiiiiiiiiiiiiiii");
 const d = document;
 const $q = d.querySelectorAll.bind(d);
 const $g = d.querySelector.bind(d);
@@ -6,7 +7,6 @@ const $next = $g(".next");
 const $list = $g(".carouselList");
 let auto;
 let pauser;
-document.write("hiiiiiiiiiiiiiiiiiii");
 
 const getActiveIndex = () => {
     const $active = $g("[data-active]");
