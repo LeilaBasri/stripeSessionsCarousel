@@ -6,6 +6,7 @@ const $next = $g(".next");
 const $list = $g(".carouselList");
 let auto;
 let pauser;
+document.write("hiiiiiiiiiiiiiiiiiii");
 
 const getActiveIndex = () => {
     const $active = $g("[data-active]");
