@@ -1,4 +1,4 @@
-document.write("hiiiiiiiiiiiiiiiiiii");
+
 const d = document;
 const $q = d.querySelectorAll.bind(d);
 const $g = d.querySelector.bind(d);
